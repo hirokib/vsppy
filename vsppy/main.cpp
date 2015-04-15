@@ -10,7 +10,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
-
+#include <boost\date_time\gregorian\gregorian.hpp>
 #include "quote.h"
 
 using std::cout;

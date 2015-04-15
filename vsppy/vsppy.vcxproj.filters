@@ -21,9 +21,15 @@
     <ClCompile Include="quote.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="stockticks.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="quote.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stockticks.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
