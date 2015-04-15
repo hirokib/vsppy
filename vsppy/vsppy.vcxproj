@@ -67,8 +67,7 @@
     <ClInclude Include="..\..\..\..\Dropbox\finppy\finppy\quote.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\Dropbox\finppy\finppy\main.cpp" />
-    <ClCompile Include="..\..\..\..\Dropbox\finppy\finppy\quote.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
