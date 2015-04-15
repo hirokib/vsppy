@@ -10,6 +10,9 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include <boost/lambda/lambda.hpp>
+
+
 
 #include "quote.h"
 
@@ -76,6 +79,8 @@ int main(int argc, char** argv) {
 	for (auto ix = st.stocks.begin(); ix != st.stocks.end() && !st.stocks.empty(); ++ix) {
 		// (*ix).printDate();
 	}
+
+	
 
 	system("pause");
 
