@@ -74,6 +74,9 @@
   <ItemGroup>
     <ClInclude Include="quote.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="data\GOOG.csv" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
