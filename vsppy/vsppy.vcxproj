@@ -66,11 +66,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="iofunctions.cpp" />
     <ClCompile Include="stockticks.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="quote.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="iofunctions.h" />
     <ClInclude Include="quote.h" />
     <ClInclude Include="stockticks.h" />
   </ItemGroup>
