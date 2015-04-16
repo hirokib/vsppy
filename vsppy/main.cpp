@@ -10,8 +10,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
-#include <boost/lambda/lambda.hpp>
-
+#include <boost\date_time\gregorian\gregorian.hpp>
 
 
 #include "quote.h"
@@ -47,6 +46,7 @@ std::istream &read(std::istream &is, StockInfo &stk) {
 	int volume;
 	float adj_close;
 	is >> date >> open >> high >> low >> close >> volume >> adj_close;
+
 	Quote new_quote(date, open, high, low, close, volume, adj_close);
 	//test.printDate();
 	stk.stocks.push_back(new_quote);
@@ -80,7 +80,7 @@ int main(int argc, char** argv) {
 		// (*ix).printDate();
 	}
 
-	
+
 
 	system("pause");
 
