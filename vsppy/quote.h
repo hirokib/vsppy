@@ -12,17 +12,23 @@
 
 #include <string>
 #include <iostream>
+#include <boost\date_time\posix_time\posix_time.hpp>
+
+using boost::posix_time::ptime;
+
 
 class Quote {
+
+
 public:
 
-	Quote(std::string date, float open, float high, float low, float close, int volume, float adj_close);
+	Quote(ptime date, float open, float high, float low, float close, int volume, float adj_close);
 	void printDate();
 	void printOpen();
 
 private:
 
-	std::string date;
+	ptime date;
 	float open;
 	float high;
 	float low;

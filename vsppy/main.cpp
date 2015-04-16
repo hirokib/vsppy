@@ -10,7 +10,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
-#include <boost\date_time\gregorian\gregorian.hpp>
+#include <boost\date_time\posix_time\posix_time.hpp>
 #include "quote.h"
 
 using std::cout;
@@ -37,6 +37,8 @@ std::istream &read(std::istream &is, StockInfo &stk) {
 
 
 	std::string date;
+	boost::posix_time::ptime d(boost::posix_time::time_from_string(date));
+
 	float open;
 	float high;
 	float low;
@@ -44,7 +46,7 @@ std::istream &read(std::istream &is, StockInfo &stk) {
 	int volume;
 	float adj_close;
 	is >> date >> open >> high >> low >> close >> volume >> adj_close;
-	Quote new_quote(date, open, high, low, close, volume, adj_close);
+	Quote new_quote(d, open, high, low, close, volume, adj_close);
 	//test.printDate();
 	stk.stocks.push_back(new_quote);
 	return is;
@@ -70,8 +72,8 @@ int main(int argc, char** argv) {
 	std::cout << st.stocks.size() << std::endl;
 
 
-	Quote t2("2014-03-27", 568.0, 568.0, 552.92, 558.46, 13100, 558.46);
-	t2.printOpen();
+	//Quote t2("2014-03-27", 568.0, 568.0, 552.92, 558.46, 13100, 558.46);
+	//t2.printOpen();
 
 	for (auto ix = st.stocks.begin(); ix != st.stocks.end() && !st.stocks.empty(); ++ix) {
 		// (*ix).printDate();
