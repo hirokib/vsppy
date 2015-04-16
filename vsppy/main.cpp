@@ -5,16 +5,18 @@
 * Created on April 13, 2015, 4:47 PM
 */
 
-#include <cstdlib>
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <vector>
 #include <boost\date_time\posix_time\posix_time.hpp>
+#include <algorithm>
+#include <boost\filesystem.hpp>
+
 #include "quote.h"
 #include "stockticks.h"
 #include "iofunctions.h"
-#include <boost\filesystem.hpp>
+
 
 
 using std::cout;
@@ -26,10 +28,34 @@ namespace fs = boost::filesystem;
 int main(int argc, char** argv) {
 
 
-	fs::path data_dir("C:/");
+	fs::path data_dir("./data");
+	std::cout << data_dir << std::endl;
 
-	fs::path full_path(boost::filesystem::current_path());
-	std::cout << "Current path is : " << full_path << std::endl;
+	try {
+		if (fs::is_directory(data_dir)){
+			std::cout << "is a directory to data" << std::endl;
+
+			std::vector<fs::path> vec;
+			std::copy(fs::directory_iterator(data_dir), fs::directory_iterator(), std::back_inserter(vec));
+			sort(vec.begin(), vec.end());
+
+
+
+			fs::directory_iterator end;
+			for (fs::directory_iterator iter(data_dir); iter != end; ++iter) {
+				cout << fs::is_regular_file(*iter) << endl;
+			}
+
+
+		}
+		else {
+			std::cout << "this is not a directory" << std::endl;
+		}
+	}
+	catch (const fs::filesystem_error& ex) {
+		cout << ex.what() << endl;
+	}
+
 
 
 

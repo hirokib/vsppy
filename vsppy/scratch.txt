@@ -1,0 +1,4 @@
+fs::path data_dir("C:/");
+
+fs::path full_path(boost::filesystem::current_path());
+std::cout << "Current path is : " << full_path << std::endl;
