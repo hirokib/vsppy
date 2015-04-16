@@ -4,7 +4,7 @@
 
 
 
-Quote::Quote(std::string date, float open, float high, float low, float close, int volume, float adj_close) {
+Quote::Quote(ptime date, float open, float high, float low, float close, int volume, float adj_close) {
 	this->date = date;
 	this->open = open;
 	this->high = high;
