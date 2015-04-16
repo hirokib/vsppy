@@ -14,14 +14,14 @@ Quote::Quote(ptime date, float open, float high, float low, float close, int vol
 	this->adj_close = adj_close;
 }
 
-void Quote::printDate() {
-	std::cout << this->date << std::endl;
-
-}
-
-void Quote::printOpen() {
-	std::cout << this->open << std::endl;
-}
+//void Quote::printDate() {
+//	std::cout << this->date << std::endl;
+//
+//}
+//
+//void Quote::printOpen() {
+//	std::cout << this->open << std::endl;
+//}
 
 
 

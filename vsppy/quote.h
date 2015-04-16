@@ -23,8 +23,8 @@ class Quote {
 public:
 
 	Quote(ptime date, float open, float high, float low, float close, int volume, float adj_close);
-	void printDate();
-	void printOpen();
+	//void printDate();
+	//void printOpen();
 
 private:
 

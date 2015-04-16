@@ -40,20 +40,28 @@ int main(int argc, char** argv) {
 		std::cout << "file is open" << std::endl;
 	}
 
+	//const std::string ddate = "20140327T000000";
+
+	//boost::posix_time::ptime d(boost::posix_time::from_iso_string(ddate));
+
+	//std::string testdate = boost::posix_time::to_iso_string(d);
+
+	//cout << testdate << endl;
 
 
 
+	StockTicks st;
+	while (file.good()) {
+		read(file, st);
+	}
+	std::cout << st.stocks.size() << std::endl;
+
+	for (auto ix = st.stocks.begin(); ix != st.stocks.end() && !st.stocks.empty(); ++ix) {
+		// (*ix).printDate();
+	}
 
 
-	//StockTicks st;
-	//while (file.good()) {
-	//	read(file, st);
-	//}
-	//std::cout << st.stocks.size() << std::endl;
-
-	//for (auto ix = st.stocks.begin(); ix != st.stocks.end() && !st.stocks.empty(); ++ix) {
-	//	// (*ix).printDate();
-	//}
+	file.close();
 
 	system("pause");
 

@@ -76,6 +76,9 @@
     <ClInclude Include="quote.h" />
     <ClInclude Include="stockticks.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="data\GOOG.csv" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
